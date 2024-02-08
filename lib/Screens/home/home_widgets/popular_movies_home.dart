@@ -5,10 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:netflix_clone/Api%20Functions/api_functions.dart';
 import 'package:netflix_clone/Reusable%20Widgets/reusable_widgets.dart';
 
-class TrendingMoviesHome extends StatelessWidget {
+class PopularMovies extends StatelessWidget {
   dynamic futureFunction;
   ValueNotifier valueNotifier;
-   TrendingMoviesHome({
+   PopularMovies({
    required this.futureFunction,
    required this.valueNotifier,
     super.key,
@@ -27,7 +27,7 @@ class TrendingMoviesHome extends StatelessWidget {
           return Container();
         } else {
           return SizedBox(
-            height: mediaqueryHeight(0.2, context),
+            height: mediaqueryHeight(0.35, context),
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: valueNotifier.value.length,
@@ -36,12 +36,13 @@ class TrendingMoviesHome extends StatelessWidget {
                   padding: index != 0
                       ? const EdgeInsets.symmetric(horizontal: 5)
                       : const EdgeInsets.only(right: 5),
-                  child: InkWell( borderRadius: BorderRadius.circular(5),
+                  child: InkWell(
+                    borderRadius: BorderRadius.circular(5),
                       onTap: () {},
                       child: ClipRRect(
                         borderRadius: BorderRadiusDirectional.circular(5),
                         child: Image(
-                          width: mediaqueryWidth(0.28, context),
+                          width: mediaqueryWidth(0.5, context),
                           image: NetworkImage(
                             imageUrl +
                                 valueNotifier.value[index]['poster_path'],

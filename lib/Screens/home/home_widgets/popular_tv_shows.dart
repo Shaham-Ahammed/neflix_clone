@@ -5,10 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:netflix_clone/Api%20Functions/api_functions.dart';
 import 'package:netflix_clone/Reusable%20Widgets/reusable_widgets.dart';
 
-class TrendingMoviesHome extends StatelessWidget {
+class PopularTvShows extends StatelessWidget {
   dynamic futureFunction;
   ValueNotifier valueNotifier;
-   TrendingMoviesHome({
+   PopularTvShows({
    required this.futureFunction,
    required this.valueNotifier,
     super.key,
@@ -36,7 +36,8 @@ class TrendingMoviesHome extends StatelessWidget {
                   padding: index != 0
                       ? const EdgeInsets.symmetric(horizontal: 5)
                       : const EdgeInsets.only(right: 5),
-                  child: InkWell( borderRadius: BorderRadius.circular(5),
+                  child: InkWell(
+                    borderRadius: BorderRadius.circular(5),
                       onTap: () {},
                       child: ClipRRect(
                         borderRadius: BorderRadiusDirectional.circular(5),

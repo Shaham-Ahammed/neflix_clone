@@ -5,10 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:netflix_clone/Api%20Functions/api_functions.dart';
 import 'package:netflix_clone/Reusable%20Widgets/reusable_widgets.dart';
 
-class TrendingMoviesHome extends StatelessWidget {
+class TopRatedTvShows extends StatelessWidget {
   dynamic futureFunction;
   ValueNotifier valueNotifier;
-   TrendingMoviesHome({
+   TopRatedTvShows({
    required this.futureFunction,
    required this.valueNotifier,
     super.key,

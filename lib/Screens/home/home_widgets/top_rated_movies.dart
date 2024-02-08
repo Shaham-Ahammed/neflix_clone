@@ -37,6 +37,7 @@ class TopRatedMovies extends StatelessWidget {
                       ? const EdgeInsets.symmetric(horizontal: 5)
                       : const EdgeInsets.only(right: 5),
                   child: InkWell(
+                    borderRadius: BorderRadius.circular(5),
                       onTap: () {},
                       child: ClipRRect(
                         borderRadius: BorderRadiusDirectional.circular(5),

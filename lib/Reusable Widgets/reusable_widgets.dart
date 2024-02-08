@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:netflix_clone/Api%20Functions/api_functions.dart';
 
 Color blackColor = Colors.black;
 Color whitecolor = Colors.white;
@@ -26,9 +25,7 @@ mediaqueryWidth(double size, BuildContext context) {
 ovals(String text) {
   return InkWell(
     borderRadius: BorderRadius.circular(80),
-    onTap: () {
-      
-    },
+    onTap: () {},
     child: Ink(
       decoration: BoxDecoration(
         border: Border.all(color: whitecolor),
@@ -40,16 +37,25 @@ ovals(String text) {
   );
 }
 
-stackContainer(String text, Color color,Color textColor,context) {
+stackContainer(String text, Color color, Color textColor, context) {
   return Container(
-    
-    decoration: BoxDecoration(
-      color: color,
-    borderRadius: BorderRadius.circular(6)  
-    ),
-    height: mediaqueryHeight(0.04, context),
-    width: mediaqueryWidth(0.33, context), 
-    child:Center(child: mytext(text, 14,FontWeight.w600,textColor),) 
-   
+      decoration:
+          BoxDecoration(color: color, borderRadius: BorderRadius.circular(6)),
+      height: mediaqueryHeight(0.04, context),
+      width: mediaqueryWidth(0.33, context),
+      child: Center(
+        child: mytext(text, 14, FontWeight.w600, textColor),
+      ));
+}
+
+sizedBoxHeight(double height) {
+  return SizedBox(
+    height: height,
+  );
+}
+
+sizedBoxWidth(double width) {
+  return SizedBox(
+    width: width,
   );
 }

@@ -36,17 +36,20 @@ class UpcomingMovies extends StatelessWidget {
                   padding: index != 0
                       ? const EdgeInsets.symmetric(horizontal: 5)
                       : const EdgeInsets.only(right: 5),
-                  child: InkWell(
+                  child: InkWell( borderRadius: BorderRadius.circular(5),
                       onTap: () {},
-                      child: ClipRRect(
-                        borderRadius: BorderRadiusDirectional.circular(5),
-                        child: Image(
-                          width: mediaqueryWidth(0.28, context),
-                          image: NetworkImage(
-                            imageUrl +
-                                valueNotifier.value[index]['poster_path'],
+                     
+                      child: Ink(
+                        child: ClipRRect(
+                          borderRadius: BorderRadiusDirectional.circular(5),
+                          child: Image(
+                            width: mediaqueryWidth(0.28, context),
+                            image: NetworkImage(
+                              imageUrl +
+                                  valueNotifier.value[index]['poster_path'],
+                            ),
+                            fit: BoxFit.cover,
                           ),
-                          fit: BoxFit.cover,
                         ),
                       )),
                 );

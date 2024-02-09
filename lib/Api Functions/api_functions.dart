@@ -1,3 +1,4 @@
+import 'package:netflix_clone/Screens/News%20And%20Hot/functions/date_convertion.dart';
 import 'package:netflix_clone/api_key.dart';
 import 'package:netflix_clone/value_notifiers.dart';
 import 'package:tmdb_api/tmdb_api.dart';
@@ -21,8 +22,11 @@ loadpopularMovies() async {
 
 loadupcomingMovies() async {
   Map upcomingMoviesResult = await tmdbWithCustomLogs.v3.movies.getUpcoming();
-  // print("hello upcoming $upcomingMoviesResult");
+  print("hello upcoming $upcomingMoviesResult");
   upcomingMovies.value = upcomingMoviesResult['results'];
+  upcomingMovies.value.forEach((element) {
+    formatDate(element['release_date']);
+  });
 }
 
 loadtopRatedMovies() async {

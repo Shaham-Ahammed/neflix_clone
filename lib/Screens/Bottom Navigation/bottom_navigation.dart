@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:netflix_clone/Reusable%20Widgets/reusable_widgets.dart';
+import 'package:netflix_clone/Screens/Bottom%20Navigation/bottom_navigation_functions.dart';
 import 'package:netflix_clone/Screens/home/home_page.dart';
 import 'package:netflix_clone/Screens/my_netflix.dart';
-import 'package:netflix_clone/Screens/news_and_hot.dart';
+import 'package:netflix_clone/Screens/News%20And%20Hot/news_and_hot.dart';
 
 class BottomNavigation extends StatefulWidget {
   const BottomNavigation({super.key});
@@ -14,37 +15,36 @@ class BottomNavigation extends StatefulWidget {
 
 class _BottomNavigationState extends State<BottomNavigation> {
   int currentPage = 0;
-  final List<Widget> _pages = [
-     Home(),
-     NewsAndHot(),
-     MyNetflix()
-  ];
-   final PageController _pageController = PageController(initialPage: 0);
+  final List<Widget> _pages = [Home(), NewsAndHot(), MyNetflix()];
+  final PageController _pageController = PageController(initialPage: 0);
 
   @override
   void initState() {
-   
     super.initState();
   }
 
   @override
   void dispose() {
-   
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: blackColor,
+        leading: buildLeadingWidget(currentPage),
+        actions: buildTrailingWidget(currentPage,context),
+        title: buildTitleWidget(currentPage),
+      ),
       body: PageView(
         controller: _pageController,
-            children: _pages,
+        children: _pages,
         onPageChanged: (value) {
           setState(() {
             currentPage = value;
           });
         },
-                
       ),
       bottomNavigationBar: BottomNavigationBar(
         iconSize: 18,
@@ -66,7 +66,6 @@ class _BottomNavigationState extends State<BottomNavigation> {
           BottomNavigationBarItem(
               icon: Icon(FontAwesomeIcons.user), label: "My Netflix")
         ],
-        
         selectedLabelStyle: const TextStyle(
           fontSize: 12,
           fontWeight: FontWeight.bold,
@@ -78,4 +77,6 @@ class _BottomNavigationState extends State<BottomNavigation> {
       ),
     );
   }
+
+ 
 }

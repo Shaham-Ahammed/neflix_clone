@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:netflix_clone/Screens/Movie%20Details/movie_details.dart';
 
 Color blackColor = Colors.black;
 Color whitecolor = Colors.white;

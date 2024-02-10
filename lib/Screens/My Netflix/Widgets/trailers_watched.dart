@@ -44,7 +44,7 @@ class TrailersWatched extends StatelessWidget {
                             width: mediaqueryWidth(0.6, context),
                             image: NetworkImage(
                               imageUrl +
-                                  valueNotifier.value[index]['poster_path'],
+                                  valueNotifier.value[index]['backdrop_path'],
                             ),
                             fit: BoxFit.cover,
                             alignment: Alignment.topCenter),

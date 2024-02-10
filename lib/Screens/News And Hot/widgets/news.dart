@@ -63,7 +63,7 @@ class ImageForNews extends StatelessWidget {
             fit: BoxFit.cover,alignment: Alignment.topCenter,
             image: NetworkImage(imageUrl +
                 upcomingMovies.value[index]
-                    ['poster_path'])),
+                    ['backdrop_path'])),
       ),
     );
   }

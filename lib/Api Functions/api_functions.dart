@@ -17,12 +17,16 @@ loadtrendingMovies() async {
 loadpopularMovies() async {
   Map popularMoviesResult = await tmdbWithCustomLogs.v3.movies.getPopular();
   // print("hello jack $popularMoviesResult");
+
   popularMovies.value = popularMoviesResult['results'];
+  final popular = await tmdbWithCustomLogs.v3.movies
+      .getDetails(popularMovies.value[0]['id']);
+  print(popular);
 }
 
 loadupcomingMovies() async {
   Map upcomingMoviesResult = await tmdbWithCustomLogs.v3.movies.getUpcoming();
- // print("hello upcoming $upcomingMoviesResult");
+  // print("hello upcoming $upcomingMoviesResult");
   upcomingMovies.value = upcomingMoviesResult['results'];
   upcomingMovies.value.forEach((element) {
     formatDate(element['release_date']);

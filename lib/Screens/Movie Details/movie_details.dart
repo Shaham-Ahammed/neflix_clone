@@ -52,9 +52,7 @@ class MovieDetailsPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   mytext(
-                    valueNotifier.value[index]["title"] == null
-                        ? valueNotifier.value[index]["name"]
-                        : valueNotifier.value[index]["title"],
+                    valueNotifier.value[index]["title"] ?? valueNotifier.value[index]["name"],
                     28,
                     FontWeight.w700,
                   ),

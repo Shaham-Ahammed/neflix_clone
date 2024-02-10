@@ -25,7 +25,6 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-   
       body: Builder(builder: (context) {
         return SingleChildScrollView(
           child: Padding(
@@ -65,17 +64,17 @@ class _HomeState extends State<Home> {
                     futureFunction: loadpopularMovies(),
                     valueNotifier: popularMovies),
                 sizedBoxHeight(18),
-                 mytext("Top Rated Tv Shows", 18, FontWeight.w600),
+                mytext("Top Rated Tv Shows", 18, FontWeight.w600),
                 sizedBoxHeight(10),
                 TopRatedTvShows(
                     futureFunction: loadTopRatedTvShows(),
                     valueNotifier: topRatedTvShows),
                 sizedBoxHeight(18),
-                  mytext("Popular Tv Shows", 18, FontWeight.w600),
+                mytext("Popular Tv Shows", 18, FontWeight.w600),
                 sizedBoxHeight(10),
                 PopularTvShows(
                     futureFunction: loadpopularTvShows(),
-                    valueNotifier:popularTvShows),
+                    valueNotifier: popularTvShows),
                 sizedBoxHeight(18),
               ],
             ),
@@ -84,6 +83,4 @@ class _HomeState extends State<Home> {
       }),
     );
   }
-
-  
 }

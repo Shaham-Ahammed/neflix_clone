@@ -21,7 +21,7 @@ class NewsAndHotAppbarContainers extends StatelessWidget {
           return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 7),
             child: InkWell(
-              onTap: () async{
+              onTap: () async {
                 loadupcomingMovies();
               },
               child: Container(

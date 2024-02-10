@@ -19,9 +19,7 @@ loadpopularMovies() async {
   // print("hello jack $popularMoviesResult");
 
   popularMovies.value = popularMoviesResult['results'];
-  final popular = await tmdbWithCustomLogs.v3.movies
-      .getDetails(popularMovies.value[0]['id']);
-  print(popular);
+  
 }
 
 loadupcomingMovies() async {

@@ -60,7 +60,7 @@ class ImageForNews extends StatelessWidget {
         width: mediaqueryWidth(0.83, context),
         child: Image(
             height: mediaqueryHeight(0.2, context),
-            fit: BoxFit.cover,
+            fit: BoxFit.cover,alignment: Alignment.topCenter,
             image: NetworkImage(imageUrl +
                 upcomingMovies.value[index]
                     ['poster_path'])),

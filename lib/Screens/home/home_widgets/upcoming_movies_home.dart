@@ -4,6 +4,8 @@
 import 'package:flutter/material.dart';
 import 'package:netflix_clone/Api%20Functions/api_functions.dart';
 import 'package:netflix_clone/Reusable%20Widgets/reusable_widgets.dart';
+import 'package:netflix_clone/Screens/Movie%20Details/movie_details.dart';
+import 'package:netflix_clone/value_notifiers.dart';
 
 class UpcomingMovies extends StatelessWidget {
   dynamic futureFunction;
@@ -37,7 +39,11 @@ class UpcomingMovies extends StatelessWidget {
                       ? const EdgeInsets.symmetric(horizontal: 5)
                       : const EdgeInsets.only(right: 5),
                   child: InkWell( borderRadius: BorderRadius.circular(5),
-                      onTap: () {},
+                      onTap: () { Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => MovieDetailsPage(
+                                  index: index,
+                                  valueNotifier: upcomingMovies,
+                                )));},
                      
                       child: Ink(
                         child: ClipRRect(

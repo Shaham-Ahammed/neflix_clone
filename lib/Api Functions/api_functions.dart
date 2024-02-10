@@ -22,7 +22,7 @@ loadpopularMovies() async {
 
 loadupcomingMovies() async {
   Map upcomingMoviesResult = await tmdbWithCustomLogs.v3.movies.getUpcoming();
-  print("hello upcoming $upcomingMoviesResult");
+ // print("hello upcoming $upcomingMoviesResult");
   upcomingMovies.value = upcomingMoviesResult['results'];
   upcomingMovies.value.forEach((element) {
     formatDate(element['release_date']);

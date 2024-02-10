@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:netflix_clone/Screens/Movie%20Details/movie_details.dart';
 
 Color blackColor = Colors.black;
 Color whitecolor = Colors.white;
@@ -22,10 +23,12 @@ mediaqueryWidth(double size, BuildContext context) {
 
 //home screen wiget function
 
-ovals(String text) {
+ovals(String text,context) {
   return InkWell(
     borderRadius: BorderRadius.circular(80),
-    onTap: () {},
+    onTap: () {
+     
+    },
     child: Ink(
       decoration: BoxDecoration(
         border: Border.all(color: whitecolor),

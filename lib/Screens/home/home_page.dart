@@ -4,13 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:netflix_clone/Api%20Functions/api_functions.dart';
 import 'package:netflix_clone/Reusable%20Widgets/reusable_widgets.dart';
 import 'package:netflix_clone/Screens/home/home_widgets/appbar_containers.dart';
-import 'package:netflix_clone/Screens/home/home_widgets/appbar_homepage.dart';
 import 'package:netflix_clone/Screens/home/home_widgets/main_image.dart';
 import 'package:netflix_clone/Screens/home/home_widgets/popular_movies_home.dart';
 import 'package:netflix_clone/Screens/home/home_widgets/popular_tv_shows.dart';
 import 'package:netflix_clone/Screens/home/home_widgets/top_rated_movies.dart';
 import 'package:netflix_clone/Screens/home/home_widgets/top_rated_tv_shows.dart';
 import 'package:netflix_clone/Screens/home/home_widgets/trending_movies_home.dart';
+import 'package:netflix_clone/Screens/home/home_widgets/upcoming_movies_home.dart';
 import 'package:netflix_clone/value_notifiers.dart';
 
 class Home extends StatefulWidget {
@@ -25,7 +25,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-     // appBar: homePageAppBar(context),
+   
       body: Builder(builder: (context) {
         return SingleChildScrollView(
           child: Padding(
@@ -55,7 +55,7 @@ class _HomeState extends State<Home> {
                 sizedBoxHeight(18),
                 mytext("Upcoming Movies", 18, FontWeight.w600),
                 sizedBoxHeight(10),
-                TopRatedMovies(
+                UpcomingMovies(
                     futureFunction: loadupcomingMovies(),
                     valueNotifier: upcomingMovies),
                 sizedBoxHeight(18),

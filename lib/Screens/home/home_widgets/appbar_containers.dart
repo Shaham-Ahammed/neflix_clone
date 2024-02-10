@@ -6,14 +6,14 @@ Row appBarContainers(BuildContext context) {
                 SizedBox(
                   width: mediaqueryWidth(0.03, context),
                 ),
-                ovals("TV Shows"),
+                ovals("TV Shows",context),
                 SizedBox(
                   width: mediaqueryWidth(0.02, context),
                 ),
-                ovals("Movies"),
+                ovals("Movies",context),
                 SizedBox(
                   width: mediaqueryWidth(0.02, context),
                 ),
-                ovals("Categories ▼")
+                ovals("Categories ▼",context)
               ]);
   }

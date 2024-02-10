@@ -3,7 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:netflix_clone/Reusable%20Widgets/reusable_widgets.dart';
 import 'package:netflix_clone/Screens/Bottom%20Navigation/bottom_navigation_functions.dart';
 import 'package:netflix_clone/Screens/home/home_page.dart';
-import 'package:netflix_clone/Screens/my_netflix.dart';
+import 'package:netflix_clone/Screens/My%20Netflix/my_netflix.dart';
 import 'package:netflix_clone/Screens/News%20And%20Hot/news_and_hot.dart';
 
 class BottomNavigation extends StatefulWidget {

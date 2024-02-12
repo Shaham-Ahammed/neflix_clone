@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:netflix_clone/Api%20Functions/api_functions.dart';
 import 'package:netflix_clone/Reusable%20Widgets/reusable_widgets.dart';
-import 'package:netflix_clone/Screens/News%20And%20Hot/widgets/news.dart';
-import 'package:netflix_clone/Screens/News%20And%20Hot/widgets/suggestions_cotainers.dart';
+import 'package:netflix_clone/Screens/news%20and%20hot/widgets/news.dart';
+import 'package:netflix_clone/Screens/news%20and%20hot/widgets/suggestions_cotainers.dart';
 import 'package:netflix_clone/value_notifiers.dart';
 
 class NewsAndHot extends StatelessWidget {

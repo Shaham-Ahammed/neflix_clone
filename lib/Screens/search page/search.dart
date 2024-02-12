@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:netflix_clone/Api%20Functions/api_functions.dart';
 import 'package:netflix_clone/Reusable%20Widgets/reusable_widgets.dart';
-import 'package:netflix_clone/Screens/Movie%20Details/movie_details.dart';
+import 'package:netflix_clone/Screens/movie%20details/movie_details.dart';
 import 'package:netflix_clone/Screens/search%20page/widgets/appbar_searchpage.dart';
 import 'package:netflix_clone/Screens/search%20page/widgets/search_box.dart';
 import 'package:netflix_clone/Screens/search%20page/widgets/search_list_tile.dart';

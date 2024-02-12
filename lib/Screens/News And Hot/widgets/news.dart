@@ -4,7 +4,7 @@
 import 'package:flutter/material.dart';
 import 'package:netflix_clone/Api%20Functions/api_functions.dart';
 import 'package:netflix_clone/Reusable%20Widgets/reusable_widgets.dart';
-import 'package:netflix_clone/Screens/News%20And%20Hot/functions/date_convertion.dart';
+import 'package:netflix_clone/Screens/news%20and%20hot/functions/date_convertion.dart';
 import 'package:netflix_clone/value_notifiers.dart';
 
 class TitleAndOverview extends StatelessWidget {

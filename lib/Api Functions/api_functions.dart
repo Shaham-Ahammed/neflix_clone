@@ -1,4 +1,4 @@
-import 'package:netflix_clone/Screens/News%20And%20Hot/functions/date_convertion.dart';
+import 'package:netflix_clone/Screens/news%20and%20hot/functions/date_convertion.dart';
 import 'package:netflix_clone/value_notifiers.dart';
 import 'package:tmdb_api/tmdb_api.dart';
 

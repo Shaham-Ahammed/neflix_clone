@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:netflix_clone/Reusable%20Widgets/reusable_widgets.dart';
-import 'package:netflix_clone/Screens/My%20Netflix/Widgets/images_and_headers.dart';
-import 'package:netflix_clone/Screens/My%20Netflix/Widgets/listtiles.dart';
-import 'package:netflix_clone/Screens/My%20Netflix/Widgets/profile_pic.dart';
+import 'package:netflix_clone/Screens/my%20netflix/Widgets/images_and_headers.dart';
+import 'package:netflix_clone/Screens/my%20netflix/Widgets/listtiles.dart';
+import 'package:netflix_clone/Screens/my%20netflix/Widgets/profile_pic.dart';
 
 
 class MyNetflix extends StatelessWidget {

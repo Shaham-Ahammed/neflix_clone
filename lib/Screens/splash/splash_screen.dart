@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:netflix_clone/Reusable%20Widgets/reusable_widgets.dart';
-import 'package:netflix_clone/Screens/Bottom%20Navigation/bottom_navigation.dart';
+import 'package:netflix_clone/Screens/bottom%20navigation/bottom_navigation.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

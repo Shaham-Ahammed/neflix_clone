@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:netflix_clone/Api%20Functions/api_functions.dart';
 import 'package:netflix_clone/Reusable%20Widgets/reusable_widgets.dart';
-import 'package:netflix_clone/Screens/My%20Netflix/Widgets/trailers_watched.dart';
+import 'package:netflix_clone/Screens/my%20netflix/Widgets/trailers_watched.dart';
 import 'package:netflix_clone/Screens/home/home_widgets/top_rated_movies.dart';
+import 'package:netflix_clone/Screens/home/home_widgets/trending_movies_home.dart';
 import 'package:netflix_clone/value_notifiers.dart';
 
 class TopRatedImage extends StatelessWidget {
@@ -77,7 +78,7 @@ class TvShowsImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(left: 10),
-      child: TopRatedMovies(
+      child: TrendingMoviesHome(
           futureFunction: loadtrendingMovies(),
           valueNotifier: trendingMovies),
     );

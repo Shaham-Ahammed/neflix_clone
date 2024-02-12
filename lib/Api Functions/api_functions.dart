@@ -1,7 +1,10 @@
 import 'package:netflix_clone/Screens/News%20And%20Hot/functions/date_convertion.dart';
-import 'package:netflix_clone/api_key.dart';
 import 'package:netflix_clone/value_notifiers.dart';
 import 'package:tmdb_api/tmdb_api.dart';
+
+String apiKey = "16b9186e4872aa7028d55cad9cfe6e0a";
+String readAccessToken =
+    "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNmI5MTg2ZTQ4NzJhYTcwMjhkNTVjYWQ5Y2ZlNmUwYSIsInN1YiI6IjY1YzMxY2Q5MTU3OTRhMDE4MzU1NjY5ZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.fshV5LatFc-G3gQTNIOOW2bwcDcXPYJ3dCkhSWXTn1o";
 
 TMDB tmdbWithCustomLogs = TMDB(ApiKeys(apiKey, readAccessToken),
     logConfig: const ConfigLogger(showLogs: true, showErrorLogs: true));

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:netflix_clone/Screens/Bottom%20Navigation/bottom_navigation.dart';
 import 'package:netflix_clone/Screens/Splash%20Screen/splash.dart';
 
 

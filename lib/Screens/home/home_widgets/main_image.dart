@@ -1,6 +1,7 @@
   import 'package:flutter/material.dart';
 import 'package:netflix_clone/Api%20Functions/api_functions.dart';
 import 'package:netflix_clone/Reusable%20Widgets/reusable_widgets.dart';
+import 'package:netflix_clone/Screens/home/home_widgets/appbar_containers.dart';
 import 'package:netflix_clone/value_notifiers.dart';
 
 class HomePageMainPic extends StatelessWidget {
@@ -29,7 +30,7 @@ class HomePageMainPic extends StatelessWidget {
                   decoration: BoxDecoration(
                       image: DecorationImage(
                           image: NetworkImage(
-                              "https://image.tmdb.org/t/p/w500" +
+                              'https://image.tmdb.org/t/p/w500' +
                                   trendingMovies.value[0]
                                       ['poster_path']))),
                 ),

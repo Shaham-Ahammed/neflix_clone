@@ -29,9 +29,9 @@ loadupcomingMovies() async {
   Map upcomingMoviesResult = await tmdbWithCustomLogs.v3.movies.getUpcoming();
   // print("hello upcoming $upcomingMoviesResult");
   upcomingMovies.value = upcomingMoviesResult['results'];
-  upcomingMovies.value.forEach((element) {
+  for (var element in upcomingMovies.value) {
     formatDate(element['release_date']);
-  });
+  }
 }
 
 loadtopRatedMovies() async {

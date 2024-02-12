@@ -43,8 +43,11 @@ class MovieDetailsPage extends StatelessWidget {
               child: Image(
                   fit: BoxFit.cover,
                   alignment: Alignment.topCenter,
-                  image: NetworkImage(
-                      imageUrl + valueNotifier.value[index]['poster_path'])),
+                  image: NetworkImage(valueNotifier.value[index]
+                              ['poster_path'] ==
+                          null
+                      ? "https://i.pcmag.com/imagery/reviews/05cItXL96l4LE9n02WfDR0h-5.fit_scale.size_760x427.v1582751026.png"
+                      : imageUrl + valueNotifier.value[index]['poster_path'])),
             ),
             Padding(
               padding: const EdgeInsets.all(8),
@@ -52,7 +55,8 @@ class MovieDetailsPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   mytext(
-                    valueNotifier.value[index]["title"] ?? valueNotifier.value[index]["name"],
+                    valueNotifier.value[index]["title"] ??
+                        valueNotifier.value[index]["name"],
                     28,
                     FontWeight.w700,
                   ),
@@ -68,7 +72,7 @@ class MovieDetailsPage extends StatelessWidget {
                       Icons.file_download_outlined),
                   sizedBoxHeight(mediaqueryHeight(0.03, context)),
                   mytext(
-                      valueNotifier.value[index]['overview'] ,
+                      valueNotifier.value[index]['overview'],
                       14,
                       FontWeight.normal,
                       const Color.fromARGB(226, 255, 255, 255)),
